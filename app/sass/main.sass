@@ -355,8 +355,12 @@ button[type='submit']
                 img
                     margin-right: gem(14)
                     width: gem(50)
+
+//soon
 .soon
     margin-top: gem(40)
+    z-index: 2
+    height: gem(600)
     .section-bg
         img
             width: 100%
@@ -377,4 +381,27 @@ button[type='submit']
         img
             width: gem(440)
 
-
+//task
+.task
+    height: gem(700)
+    .background__square
+        margin-left: gem(-500)
+        margin-top: gem(-400)
+    &-contains
+        display: flex
+        justify-content: space-between
+    &-left
+        display: flex
+        flex-direction: column
+        width: gem(480)
+        margin-top: gem(200)
+        h2
+            margin-bottom: gem(16)
+    &-right
+        display: flex
+        height: gem(700)
+        flex-direction: row
+        align-items: center
+        .small-mockup
+            position: relative
+            right: gem(94)
