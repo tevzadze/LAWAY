@@ -31,7 +31,7 @@ main
     position: relative
     width: 100%
     flex: 1 0 auto
-    // height: gem(2000)
+    height: gem(20000)
 
 .footer
     width: 100%
@@ -137,7 +137,18 @@ button[type='submit']
         width: gem(300)
 .small-mockup
     width: gem(220)
-
+.get-access
+    display: flex
+    background: #FE3A89
+    width: gem(185)
+    height: gem(44)
+    align-items: center
+    justify-content: center
+    // margin-left: gem(32)
+    border-radius: gem(100)
+    transition: all 0.3s ease
+    &:hover
+        box-shadow: 0 gem(5) gem(24) 0 rgba(249,59,140,.64)
 //header
 .header
     height: gem(80)
@@ -254,14 +265,7 @@ button[type='submit']
                     &.email
                         background: #34d56e
         .get-access
-            display: flex
-            background: #FE3A89
-            width: gem(185)
-            height: gem(44)
-            align-items: center
-            justify-content: center
             margin-left: gem(32)
-            border-radius: gem(100)
         a
             display: flex
 
@@ -295,7 +299,7 @@ button[type='submit']
 
 //inspire-section
 .inspire
-    height: gem(1200)
+    height: gem(1000)
     .background__square
         margin-top: gem(-300)
         margin-left: gem(600)
@@ -351,6 +355,26 @@ button[type='submit']
                 img
                     margin-right: gem(14)
                     width: gem(50)
+.soon
+    margin-top: gem(40)
+    .section-bg
+        img
+            width: 100%
+    &-contains
+        display: flex
+        justify-content: space-between
+        margin-top: gem(150)
+        padding: 0 gem(64)
 
+    &-left
+        width: gem(497)
+        margin-top: gem(40)
+        h2
+            margin-bottom: gem(24)
+        p
+            margin-bottom: gem(20)
+    &-right
+        img
+            width: gem(440)
 
 
