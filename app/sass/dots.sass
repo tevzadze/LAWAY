@@ -1,0 +1,67 @@
+.background__square 
+    border: 2px solid #f5f5f5
+    width: gem(1000)
+    height: gem(1000)
+    border-radius: gem(50)
+    position: absolute
+    transform-origin: 50% 50%
+    animation: moveAndRotate 20s ease-in infinite alternate
+    .dot 
+        border-radius: 50%
+        width: gem(12)
+        height: gem(12)
+        position: absolute
+  
+    .dot_1 
+        background-color: #6e69f8
+        box-shadow: 0 -1px gem(16) 0 rgba(110, 105, 248, 0.32)
+        left: gem(50)
+        top: gem(-6)
+        animation: moveHorizontal 10s ease-in-out alternate infinite
+  
+    .dot_2 
+        background-color: #f93b8c
+        box-shadow: 0 -1px gem(16) 0 rgba(249, 59, 140, 0.32)
+        top: gem(50)
+        right: gem(-6)
+        animation: moveVertical 13s ease-in-out alternate infinite
+  
+    .dot_3 
+        background-color: #5ffadf
+        box-shadow: 0 -1px gem(16) 0 rgba(95,250,223,.54)
+        left: gem(50)
+        bottom: gem(-6)
+        animation: moveHorizontal 8s ease-in-out alternate-reverse infinite
+  
+    .dot_4 
+        background-color: #f93b8c
+        box-shadow: 0 -1px gem(16) 0 rgba(249, 59, 140, 0.32)
+        top: gem(50)
+        left: gem(-6)
+        animation: moveVertical 6s ease-in-out alternate-reverse infinite
+  
+
+@keyframes moveHorizontal
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(gem(750))
+ 
+
+
+@keyframes moveVertical
+    0%
+        transform: translateY(0)
+     
+    100%
+        transform: translateY(gem(750))
+ 
+
+
+@keyframes moveAndRotate
+    0%
+        transform: translateY(0) translateX(0) rotate(15deg)
+ 
+    100%
+        transform: translateY(10%) translateX(15%) rotate(30deg)
+ 
