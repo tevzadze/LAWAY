@@ -45,4 +45,17 @@ $(document).ready(function() {
     })
 
 
+    // reward carousel
+    let owl = $('.reward-carousel')
+
+    owl.owlCarousel({
+        center: true,
+        items: 6,
+        loop: true,
+        nav: false,
+        dots: false,
+        autoplay: true,
+
+    })
+
 });
