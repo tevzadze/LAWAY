@@ -383,7 +383,7 @@ button[type='submit']
 
 //task
 .task
-    height: gem(700)
+    height: gem(500)
     .background__square
         margin-left: gem(-500)
         margin-top: gem(-400)
@@ -405,3 +405,33 @@ button[type='submit']
         .small-mockup
             position: relative
             right: gem(94)
+
+
+
+//reward
+.reward
+    height: gem(700)
+    .section-bg
+        // margin-top: gem(200)
+        img
+            width: 100%
+            margin-top: gem(70)
+    &-contains
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: flex-start
+    &-left
+        display: flex
+        flex-direction: row
+        align-items: center
+        height: gem(700)
+        .small-mockup
+            position: relative
+            left: gem(79)
+    &-right
+        width: gem(480)
+        margin-right: gem(50)
+        margin-top: gem(320)
+        h2
+            margin-bottom: gem(15)
