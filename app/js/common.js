@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     //parallax
 
-    $('.section-bg').scrolly();
+    // $('.section-bg').scrolly();
 
     //share-dropdown
 

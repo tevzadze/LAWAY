@@ -310,7 +310,8 @@ button[type='submit']
     &.second
         height: gem(600)
         .background__square
-            margin-top: 0
+            margin-top: gem(-300)
+            margin-left: gem(1100)
         h2
             margin-bottom: gem(16)
         p
@@ -375,14 +376,15 @@ button[type='submit']
 .soon
     margin-top: gem(40)
     z-index: 2
-    height: gem(600)
+    height: gem(450)
     .section-bg
+        margin-top: gem(100)
         img
             width: 100%
     &-contains
         display: flex
         justify-content: space-between
-        margin-top: gem(150)
+        margin-top: gem(70)
         padding: 0 gem(64)
 
     &-left
@@ -428,7 +430,7 @@ button[type='submit']
         // margin-top: gem(200)
         img
             width: 100%
-            margin-top: gem(70)
+            margin-top: gem(170)
     &-contains
         display: flex
         flex-direction: row
@@ -486,7 +488,7 @@ button[type='submit']
 
 //rate
 .rate
-    height: gem(700)
+    height: gem(600)
     margin-top: gem(100)
     .background__square
         margin-left: gem(-500)
@@ -512,7 +514,7 @@ button[type='submit']
     .circle_container 
         position: absolute
         margin-left: gem(-110)
-        top: gem(-180)
+        top: gem(-80)
         width: gem(700)
         height: gem(700)
         border: solid 2px #f5f5f5
@@ -664,13 +666,14 @@ button[type='submit']
     .section-bg
         img
             width: 100%
+            margin-top: gem(50)
     &-contains
         display: flex
         justify-content: space-between
-        margin-top: gem(70)
+        margin-top: gem(0)
     &-left
         img
-            width: gem(440)
+            width: gem(480)
             margin-left: gem(44)
     &-right
         margin-left: gem(70)
@@ -690,7 +693,7 @@ button[type='submit']
             height: gem(543)
             width: 100%
     .section-content
-        margin-top: gem(280)
+        margin-top: gem(170)
 .footer
     display: flex
     // height: gem(543)
@@ -783,7 +786,7 @@ button[type='submit']
     min-height: 100vh
     flex-direction: row
     justify-content: space-between
-    transition: all 0.5s ease
+    // transition: all 0.5s ease
     &.active
         left: 0
     &-left
