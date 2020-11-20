@@ -125,11 +125,12 @@ button[type='submit']
 //variables
 .section-bg
     position: relative
-    
+    z-index: 1
 .section-content
     position: absolute
     width: 100%
     top: 0
+    z-index: 2
 .image-grow
     width: gem(230)
     transition: all 2s ease
@@ -234,7 +235,7 @@ button[type='submit']
                 display: flex
                 flex-direction: row
                 flex-wrap: wrap
-                padding-bottom: gem(50)
+                // padding-bottom: gem(50)
                 a
                     background: red
                     width: 50%
@@ -265,6 +266,10 @@ button[type='submit']
                         background: #b136c5 
                     &.email
                         background: #34d56e
+                        border-radius: 0 0 0 gem(10)
+                    &.tiktok
+                        background: #010101
+                        border-radius: 0 0 gem(10) 0
         .get-access
             margin-left: gem(32)
         a
@@ -286,6 +291,7 @@ button[type='submit']
             width: gem(461)
     .hero-screen-bg
         width: 100%
+        height: gem(860)
     .main-photo
         width: gem(370)
         margin-top: gem(126)
@@ -302,6 +308,7 @@ button[type='submit']
 .inspire
     height: gem(1000)
     &.second
+        height: gem(600)
         .background__square
             margin-top: 0
         h2
@@ -468,21 +475,13 @@ button[type='submit']
             text-align: center
             padding: 0 gem(50)
             line-height: gem(20)
-//owl-carousel style changes
-// .owl-carousel.owl-drag .owl-item
-//     padding: gem(50) 0
-//     &.center
-//         .item
-//             width: gem(244)
-//             height: gem(244)
-//             margin-top: gem(0)
-//             padding-top: gem(25)
+
 .owl-stage
     padding-bottom: gem(50)
 .owl-carousel.owl-drag .owl-item
     opacity: 0.4
     transition: all 0.3s ease
-    &.active
+    &.opacutibig
         opacity: 1
 
 //rate
@@ -572,10 +571,10 @@ button[type='submit']
                 box-shadow: 0 -1px 16px 0 rgba(95, 250, 223, 0.54)
 //rounds
 .rounds
-    height: gem(560)
-    margin-top: gem(100)
-    position: relative
-    top: gem(-450)
+    height: gem(500)
+    // margin-top: gem(100)
+    // position: relative
+    // top: gem(-450)
     .background__square
         margin-left: gem(-500)
         margin-top: gem(-400)
@@ -585,7 +584,7 @@ button[type='submit']
     &-left
         width: gem(447)
         h2
-            margin-top: gem(50)
+            margin-top: gem(100)
             margin-bottom: gem(15)
         p
             margin-bottom: gem(16)
@@ -595,7 +594,8 @@ button[type='submit']
         height: gem(700)
         z-index: 2
         img
-            margin-right: gem(170)
+            // margin-right: gem(170)
+            width: gem(522)
 
     .circle_container 
         position: absolute
@@ -659,38 +659,43 @@ button[type='submit']
                 box-shadow: 0 -1px 16px 0 rgba(95, 250, 223, 0.54)
 //join
 .join
-    margin-top: gem(40)
-    z-index: 2
-    height: gem(530)
-    position: relative
-    top: gem(-500)
+    // z-index: 2
+    height: gem(500)
     .section-bg
         img
             width: 100%
     &-contains
         display: flex
         justify-content: space-between
-        margin-top: gem(150)
-        padding: 0 gem(64)
-
+        margin-top: gem(70)
     &-left
-        position: relative
-        bottom: gem(120)
         img
             width: gem(440)
+            margin-left: gem(44)
     &-right
-        width: gem(497)
-        margin-top: gem(130)
         margin-left: gem(70)
+        margin-right: gem(121)
+        margin-top: gem(250)
         h2
             margin-bottom: gem(24)
         p
             margin-bottom: gem(20)
+
+//footer
+.footer-section
+    height: gem(543)
+    .section-bg
+        height: gem(543)
+        img
+            height: gem(543)
+            width: 100%
+    .section-content
+        margin-top: gem(280)
 .footer
     display: flex
-    height: gem(543)
+    // height: gem(543)
     flex-direction: column
-    margin-top: gem(150)
+    // margin-top: gem(150)
     position: relative
     &-main
         display: flex
@@ -711,14 +716,14 @@ button[type='submit']
             a
                 display: flex
                 margin: gem(7) 0
-                transition: opacity 0.3s ease
-            a:hover
-                color: var(--color-white)
-                transition: opacity 0.3s ease
-            a:nth-child(2)
-                margin-top: gem(15)
-            a:last-child
-                margin-bottom: 0
+                transition: all 0.3s ease
+                &:hover
+                    color: var(--color-white)
+                    // transition: opacity 0.3s ease
+                &:nth-child(2)
+                    margin-top: gem(15)
+                &:last-child
+                    margin-bottom: 0
         &-contacts
             display: flex
             flex-direction: column
@@ -726,14 +731,14 @@ button[type='submit']
             a
                 display: flex
                 margin: gem(7) 0
-                transition: opacity 0.3s ease
-            a:hover
-                color: var(--color-white)
-                transition: opacity 0.3s ease
-            a:nth-child(2)
-                margin-top: gem(15)
-            a:last-child
-                margin-bottom: 0
+                transition: all 0.3s ease
+                &:hover
+                    color: var(--color-white)
+                // transition: opacity 0.3s ease
+                &:nth-child(2)
+                    margin-top: gem(15)
+                &:last-child
+                    margin-bottom: 0
         &-socials
             display: flex
             flex-direction: column
@@ -745,20 +750,177 @@ button[type='submit']
                 a
                     display: flex
                     margin: 0 gem(8)
-                a:first-child
-                    margin-left: 0
-                a:last-child
-                    margin-right: 0
+                    img
+                        opacity: 0.5
+                        transition: all 0.3s ease
+                    &:hover
+                        img
+                            opacity: 1
+                    &:first-child
+                        margin-left: 0
+                    &:last-child
+                        margin-right: 0
     &-copyright
         display: flex
         position: relative
-        margin-top: gem(84)
+        margin-top: gem(68)
         bottom: 0
         border-top: gem(1) var(--color-gray) solid
         p
             display: flex
             padding: gem(25) 0
-            
+
+
+//popup
+.popup
+    display: flex
+    position: fixed
+    top: 0
+    left: -100%
+    background: #fff
+    z-index: 10
+    width: 100%
+    min-height: 100vh
+    flex-direction: row
+    justify-content: space-between
+    transition: all 0.5s ease
+    &.active
+        left: 0
+    &-left
+        display: flex
+        flex-direction: column
+        width: 48%
+        .popup-logo
+            width: gem(104)
+            margin-top: gem(47)
+            margin-bottom: gem(27)
+            margin-left: gem(171)
+        .popup-image
+            width: 100%
+    &-right
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        margin-right: gem(171)
+        .popup-close
+            cursor: pointer
+        .form
+            display: flex
+            flex-direction: column
+            width: gem(440)
+            transition: all 0.3s ease
+            &.inactive
+                opacity: 0
+                pointer-events: none
+                transform: translateX(gem(20))
+            h2
+                margin-bottom: gem(24)
+                margin-top: gem(30)
+            form
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                justify-content: flex-start
+                input
+                    margin-top: gem(32)
+                    width: 100%
+                    height: gem(50)
+                    padding: gem(16)
+                    border: 1px solid #E7E6E6
+                    outline: none
+                    border-radius: gem(6)
+                button
+                    margin-top: gem(42)
+                    cursor: pointer
+                    width: gem(173)
+                    height: gem(43)
+                    border-radius: gem(8)
+                    opacity: 0.8
+                    transition: all 0.3s ease
+                    outline: none
+                    border: none
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    background: #FE3A89
+                    &:hover
+                        opacity: 1
+        .success
+            flex-direction: column
+            align-items: flex-start
+            width: gem(400)
+            margin-top: gem(100)
+            display: flex
+            &.inactive
+                opacity: 0
+                pointer-events: none
+                transform: translateX(gem(20))
+            h2
+                margin-bottom: gem(32)
+            p
+                margin-bottom: gem(18)
+                span
+                    font-family: Tomorrow , sans-serif
+                    font-weight: 700
+                    font-size: gem(50)
+                    line-height: 0
+                    padding-left: gem(10)
+                    background: linear-gradient(90deg, #9D7CE0 6.52%, #BE9DFF 96.87%)
+                    // background: -webkit-linear-gradient(#eee, #333)
+                    -webkit-background-clip: text
+                    -webkit-text-fill-color: transparent
+            h3
+                margin-top: gem(18)
+                margin-bottom: gem(18)
+            .share
+                display: flex
+                flex-direction: row
+                align-items: center
+                justify-content: flex-start
+                margin-top: gem(14)
+                a
+                    width: gem(133)
+                    height: gem(50)
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border-radius: gem(8)
+                    background: blue
+                    &:nth-child(1)
+                        background: #4E75C7
+                        img
+                            width: gem(14)
+                    &:nth-child(2)
+                        background: #55ACEE
+                        margin-left: gem(30)
+                        img 
+                            width: gem(29)
+
+                    img 
+                        margin-right: gem(16)
+        .success-share
+            display: flex
+            flex-direction: column
+            width: gem(400)
+            margin-top: gem(100)
+            &.inactive
+                opacity: 0
+                pointer-events: none
+                transform: translateX(gem(20))
+            h2
+                margin-bottom: gem(32)
+            p
+                margin-bottom: gem(18)
+                span
+                    font-family: Tomorrow , sans-serif
+                    font-weight: 700
+                    font-size: gem(50)
+                    line-height: 0
+                    padding-left: gem(10)
+                    background: linear-gradient(90deg, #5171F1 6.52%, #92A7FF 96.87%)
+                    // background: -webkit-linear-gradient(#eee, #333)
+                    -webkit-background-clip: text
+                    -webkit-text-fill-color: transparent
 @keyframes Rotating
     0%
         transform: rotate(0deg)
