@@ -1,4 +1,6 @@
 @media only screen and (max-width : 1200px)
+	.header-left nav
+		display: none
 	.inspire
 		&-left
 			width: gem(400)
@@ -92,6 +94,13 @@
 				width: gem(400)
 				h2
 					margin-top: gem(70)
+				&.category-active
+					h2.title-h2
+						margin-top: 0
+						font-size: gem(22)
+					.popup-close
+						height: gem(50)
+
 
 @media only screen and (max-width : 900px)
 	main
@@ -211,6 +220,10 @@
 				align-self: flex-end
 			.success
 				top: gem(100)
+			.form
+				&.category-active
+					.popup-close
+						height: unset
 	.mobile_menu
 		display: flex
 		flex-direction: column
@@ -241,7 +254,15 @@
 	main
 		padding-bottom: gem(89)
 	.header	
-		display: none
+		// display: none
+		background: none
+		.share-button, .share-dropdown, .get-access
+			display: none
+		.logo
+			display: none
+		.language
+			margin-top: gem(-20)
+			margin-left: gem(-50)
 	.popup
 		width: 100%
 		&-left

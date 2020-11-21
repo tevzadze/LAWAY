@@ -254,4 +254,13 @@ $(document).ready(function() {
         $('.position-share').html(positionAfterSharing)
     }
 
+
+    let categoryInput = document.querySelector('#catagory')
+    let categoryDefaultS = document.querySelectorAll('.category-wrapper span')
+    
+    for(let i = 0; i <categoryDefaultS.length ; i++) {
+        categoryDefaultS[i].addEventListener('click', function () {
+            categoryInput.value = categoryDefaultS[i].textContent
+        })
+    }
 });

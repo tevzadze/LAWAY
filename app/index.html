@@ -40,6 +40,14 @@
                     </nav>
                 </div>
                 <div class="header-right">
+                    <div class="language">
+                        <span class="desc-1">
+                            RU
+                        </span>
+                        <a href="#" class="desc-1">
+                            EN
+                        </a>
+                    </div>
                     <div class="share-button">
                         <img src="img/download.svg" alt="">
                     </div>
@@ -513,7 +521,7 @@
                 <div class="popup-close">
                     <img src="img/popup-close.png" alt="">
                 </div>
-                <div class="form inactive">
+                <div class="form category-active">
                     <h2 class="title-h2">
                         Получи доступ первым!
                     </h2>
@@ -522,11 +530,32 @@
                     </p>
                     <form action="/api/v2/noenc/waitlist/subscribe" method="post">
                         <input type="text" name="name" class="desc-1" placeholder="Александр">
-                        <input type="text" name="email" class="desc-1" placeholder="Александр" id="email_field">
+                        <input type="text" name="email" class="desc-1" placeholder="aleksandr@gmail.com" id="email_field">
+                        <p class="title-h3 category-active-child">
+                            Выберите категорию
+                        </p>
+                        <input type="text" name="catagory" class="desc-1 category-active-child" placeholder="Выберите категорию" id="catagory">
+                        <div class="category-wrapper category-active-child">
+                            <span class="desc-1">Двигайся</span>
+                            <span class="desc-1">Спи</span>
+                            <span class="desc-1">Работай</span>
+                            <span class="desc-1">Учись</span>
+                            <span class="desc-1">Двигайся</span>
+                            <span class="desc-1">Двигайся</span>
+                            <span class="desc-1">Спи</span>
+                            <span class="desc-1">Учись</span>
+                            <span class="desc-1">Двигайся</span>
+                            <span class="desc-1">Двигайся</span>
+                            <span class="desc-1">Спи</span>
+                            <span class="desc-1">Работай</span>
+                            <span class="desc-1">Работай</span>
+                            <span class="desc-1">Учись</span>
+                            <span class="desc-1">Двигайся</span>
+                        </div>
                         <button class="desc-1 white">Получить доступ</button>
                     </form>
                 </div>
-                <div class="success ">
+                <div class="success inactive">
                     <h2 class="title-h2">
                         Спасибо что с нами!
                     </h2>
@@ -579,9 +608,9 @@
                 </div>
             </div>
         </div>
-    <a class="main_button desc-1 white" href="#">
-        Получить доступ
-    </a>
+        <a class="main_button desc-1 white" href="#">
+            Получить доступ
+        </a>
     </main>
     <script src="js/scripts.min.js"></script>
     <!-- include additional scripts here AFTER app scripts will run -->

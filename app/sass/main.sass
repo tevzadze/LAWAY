@@ -186,6 +186,37 @@ button[type='submit']
                 margin: 0 gem(16)
     &-right
         display: flex
+        .language
+            width: gem(44)
+            height: gem(88)
+            display: flex
+            flex-direction: column
+            flex-wrap: wrap
+            border-radius: gem(50)
+            background: #fff
+            opacity: 0.8
+            position: absolute
+            // margin-right: gem(64)
+            margin-left: gem(-80)
+            background: none
+            transition: opacity 0.3s ease
+            &:hover
+                background: #fff
+                opacity: 1
+                a
+                    opacity: 1
+                    pointer-events: unset
+            span, a
+                width: gem(44)
+                background: #fff
+                height: gem(44)
+                display: flex
+                justify-content: center
+                align-items: center
+                border-radius: gem(50)
+            a
+                opacity: 0
+                pointer-events: none
         .share-button
             display: flex
             width: gem(44)
@@ -825,6 +856,30 @@ button[type='submit']
             flex-direction: column
             width: gem(440)
             transition: all 0.3s ease
+            .category-active-child
+                display: none
+            &.category-active
+                margin-top: gem(0)
+                .category-active-child
+                    display: flex
+            p.title-h3
+                margin-top: gem(44)
+                ~ input
+                    margin-top: gem(24)
+            .category-wrapper
+                display: flex
+                flex-direction: row
+                flex-wrap: wrap
+                margin-top: gem(10)
+                span.desc-1
+                    padding: gem(8)
+                    color: #6947AE
+                    font-weight: 800
+                    cursor: pointer
+                    opacity: 0.7
+                    transition: all 0.3s ease
+                    &:hover
+                        opacity: 1
             &.inactive
                 opacity: 0
                 pointer-events: none
@@ -846,7 +901,7 @@ button[type='submit']
                     outline: none
                     border-radius: gem(6)
                 button
-                    margin-top: gem(42)
+                    margin-top: gem(25)
                     cursor: pointer
                     width: gem(173)
                     height: gem(43)
@@ -949,7 +1004,7 @@ button[type='submit']
         // TO DO
         opacity: 0
         pointer-events: none
-        position: absolute
+        position: fixed
         bottom: gem(30)
         right: gem(40)
         width: gem(390)
