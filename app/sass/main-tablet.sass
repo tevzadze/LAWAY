@@ -62,6 +62,8 @@
 				margin-right: 0
 				margin-top: gem(-150)
 	.join
+		.soon-mobile-bg
+			display: block
 		&-left
 			width: gem(400)
 			img
@@ -92,7 +94,8 @@
 					margin-top: gem(70)
 
 @media only screen and (max-width : 900px)
-	
+	main
+		padding-bottom: gem(50)
 	.hero-section 
 		.main-phone
 			display: block
@@ -208,12 +211,68 @@
 				align-self: flex-end
 			.success
 				top: gem(100)
+	.mobile_menu
+		display: flex
+		flex-direction: column
+		&-logo
+			display: flex
+		&-main
+			display: flex
+			flex-direction: column
+			align-items: center
+			nav
+				a
+					opacity: 0.5
+				a:hover
+					opacity: 1
+	.main_button
+	    display: flex
+	    background: #fe3a89
+	    width: 100%
+	    height: gem(54)
+	    align-items: center
+	    justify-content: center
+	    transition: all .3s ease
+	    position: fixed
+	    bottom: 0
+	    z-index: 9
 
 @media only screen and (max-width : 480px)
+	main
+		padding-bottom: gem(89)
 	.header	
 		display: none
 	.popup
-		display: none
+		width: 100%
+		&-left
+			img
+				margin-left: gem(10) !important
+		&-right
+			margin: 0
+			width: 100%
+			.form
+				position: relative
+				left: 0
+				width: gem(342)
+				form
+					button
+						width: 100%
+						margin-top: gem(200)
+			.success
+				width: 100%
+				margin-top: gem(38)
+				padding: 0 gem(10)
+			.success-share
+				width: 100%
+				margin-top: gem(38)
+				padding: 0 gem(10)
+				top: gem(100)
+		&-error
+			width: gem(342)
+			border-radius: gem(4)
+			right: gem(10)
+
+		
 	.hero-section .hero-logo
 		display: block
 		margin: auto
@@ -333,3 +392,54 @@
 				margin-top: gem(40)
 		&-left
 			width: 100%
+	.join
+		.soon-bg-desctop
+			display: none
+		.section-bg img
+			margin-top: 0
+		&-right
+			margin-top: gem(120)
+	.footer
+		&-section
+			.section-bg
+				img
+					width: auto
+					max-width: unset
+					height: gem(528)
+			.section-content
+				margin-top: gem(120)
+		&-main
+			flex-direction: column
+			align-items: center
+			&-logo
+				width: gem(120)
+				height: auto
+				margin-bottom: gem(50)
+				margin-right: 0
+			&-nav
+				display: none
+			&-contacts
+				align-items: center
+				margin-right: 0
+				span
+					margin-bottom: gem(20)
+					text-transform: uppercase
+					font-size: gem(20)
+					font-weight: 600
+				a.desc-2.gray
+					font-size: gem(18)
+			&-socials
+				align-items: center
+				margin-top: gem(50)
+				&-top
+					span
+						text-transform: uppercase
+						font-size: gem(20)
+						font-weight: 600
+		&-copyright
+			flex-direction: column
+			align-items: center
+			border-top: gem(1) var(--color-white) solid
+			p.desc-2.gray
+				font-size: gem(10)
+				color: var(--color-white)

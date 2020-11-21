@@ -108,7 +108,7 @@ $(document).ready(function() {
 
     //popup
 
-    $('.get-access, .popup-close').on('click', function() {
+    $('.get-access, .popup-close, .main_button').on('click', function() {
         event.preventDefault();
         console.log('his')
         $('.popup').toggleClass('active');
@@ -142,6 +142,8 @@ $(document).ready(function() {
 
     if (window.innerWidth < 480) {
         $('.soon .container').removeClass('container')
+        $('.join .section-bg .container').removeClass('container')
+        $('.footer-section .section-content .container').removeClass('container')
     }
 
 
