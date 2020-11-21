@@ -44,7 +44,11 @@
     @include remBase(1440, 0);
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1200px) {
+    @include remBase(1024, 0);
+}
+
+@media all and (max-width: 900px) {
     @include remBase(768, 0);
 }
 

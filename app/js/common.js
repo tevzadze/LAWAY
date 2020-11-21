@@ -55,6 +55,11 @@ $(document).ready(function() {
         nav: false,
         dots: false,
         autoplay: true,
+        responsive: {
+            900: {
+                items: 4
+            }
+        }
 
     })
     onTriggerChange();
@@ -67,8 +72,8 @@ $(document).ready(function() {
     })
 
     function onTriggerChange() {
-        let activeslides = document.querySelectorAll('.owl-item.active')
-        let inactiveItems = document.querySelectorAll('.owl-item')
+        let activeslides = document.querySelectorAll('.reward-carousel .owl-item.active')
+        let inactiveItems = document.querySelectorAll('.reward-carousel .owl-item')
         let activeslidesLength = activeslides.length
 
         for (let i = 0; i < inactiveItems.length; i++) {
@@ -98,4 +103,15 @@ $(document).ready(function() {
         $('.popup').toggleClass('active');
     })
 
+
+    if (  window.innerWidth < 1024) {
+      $('.inspire-row').owlCarousel({
+            center: true,
+            items: 3,
+            loop: true,
+            nav: false,
+            dots: false,
+            autoplay: true,
+        })
+    } 
 });
