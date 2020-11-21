@@ -498,7 +498,7 @@
                             </div>
                         </div>
                         <div class="footer-copyright">
-                            <p class="desc-2 gray">© 2018 Все права защищены.</p>
+                            <p class="desc-2 gray">© 2020 Все права защищены.</p>
                         </div>
                     </div>
                 </div>
@@ -513,20 +513,20 @@
                 <div class="popup-close">
                     <img src="img/popup-close.png" alt="">
                 </div>
-                <div class="form inactive">
+                <div class="form ">
                     <h2 class="title-h2">
                         Получи доступ первым!
                     </h2>
                     <p class="desc-1">
                         Получи возможность использовать приложение первым для того чтобы...
                     </p>
-                    <form action="/api/v2/noenc/waitlist/subscribe" method="post">
-                        <input type="text" name="name" class="desc-1" placeholder="Александр">
-                        <input type="text" name="email" class="desc-1" placeholder="Александр" id="email_field">
-                        <button class="desc-1 white">Получить доступ</button>
+                    <form method="post" id="contact-form">
+                        <input type="text" name="name" class="desc-1" placeholder="Имя">
+                        <input type="text" name="email" class="desc-1" placeholder="Имейл" id="email_field">
+                        <button type="submit" class="desc-1 white">Получить доступ</button>
                     </form>
                 </div>
-                <div class="success ">
+                <div class="success inactive">
                     <h2 class="title-h2">
                         Спасибо что с нами!
                     </h2>
