@@ -21,10 +21,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@700&display=swap" rel="stylesheet">
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 </head>
 
 <body>
-    <!-- Start here -->
     <header class="header">
         <div class="container">
             <div class="header-contains">
@@ -114,6 +114,7 @@
                 <div class="container">
                     <div class="hero-section-contains">
                         <div class="hero-section-left">
+                            <img src="img/Logo.svg" alt="logo" class="hero-logo">
                             <h1 class="title-h1">
                                 Что произойдет - все твое
                             </h1>
@@ -217,7 +218,8 @@
         <section class="soon">
             <div class="section-bg" data-velocity="0.1">
                 <div class="container">
-                    <img src="img/soon-bg.png" alt="">
+                    <img src="img/soon-bg.png" alt="" class="soon-bg-desctop">
+                    <img src="img/inspire-mobile-bg.png" alt="" class="soon-mobile-bg">
                 </div>
             </div>
             <div class="section-content">
@@ -517,9 +519,9 @@
                     <p class="desc-1">
                         Получи возможность использовать приложение первым для того чтобы...
                     </p>
-                    <form action="#">
+                    <form action="/api/v2/noenc/waitlist/subscribe" method="post">
                         <input type="text" name="name" class="desc-1" placeholder="Александр">
-                        <input type="text" name="email" class="desc-1" placeholder="Александр">
+                        <input type="text" name="email" class="desc-1" placeholder="Александр" id="email_field">
                         <button class="desc-1 white">Получить доступ</button>
                     </form>
                 </div>
@@ -531,7 +533,7 @@
                         Мы пришлем тебе приглашение с кодом
                         на твою почту. </p>
                     <p class="desc-1">
-                        Твоя позиция в очереди <span>1000</span>
+                        Твоя позиция в очереди <span class="position">1000</span>
                     </p>
                     <h3 class="title-h3">
                         Не хочешь ждать?
@@ -543,7 +545,7 @@
                         <a href="#" class="desc-1 white">
                             <img src="img/facebook_share.svg" alt=""> Facebook
                         </a>
-                        <a href="#" class="desc-1 white">
+                        <a href="http://twitter.com/intent/tweet?url=http://test.com;via=stack" class="desc-1 white">
                             <img src="img/tweeter.svg" alt=""> Twitter
                         </a>
                     </div>
@@ -556,9 +558,22 @@
                         Спасибо что ты с нами, твоё место 200 </p>
                     <p class="desc-1">
                         Твоё место в списке
-                        <span>
+                        <span class="position-share">
                             20
                         </span>
+                    </p>
+                </div>
+            </div>
+            <div class="popup-error">
+                <div class="popup-error-left">
+                    <img src="img/check-circle.png" alt="">
+                </div>
+                <div class="popup-error-right">
+                    <p class="title-h3">
+                        Что-то пошло не так.
+                    </p>
+                    <p class="desc-1">
+                        Попробуйте поделиться снова.
                     </p>
                 </div>
             </div>

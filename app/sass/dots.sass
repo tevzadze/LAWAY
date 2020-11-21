@@ -64,4 +64,20 @@
  
     100%
         transform: translateY(10%) translateX(15%) rotate(30deg)
- 
+
+
+@media only screen and (max-width : 480px)
+    .background__square
+        width: gem(400)
+        height: gem(400)
+    @keyframes moveHorizontal
+        0%
+            transform: translateX(0)
+        100%
+            transform: translateX(gem(300))
+    @keyframes moveVertical
+        0%
+            transform: translateY(0)
+         
+        100%
+            transform: translateY(gem(300))
