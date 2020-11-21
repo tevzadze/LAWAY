@@ -268,9 +268,12 @@
 				padding: 0 gem(10)
 				top: gem(100)
 		&-error
-			width: gem(342)
+			width: 90%
 			border-radius: gem(4)
-			right: gem(10)
+			margin: auto
+			right: 5%
+			bottom: 0
+			margin-bottom: gem(24)
 
 		
 	.hero-section .hero-logo
@@ -376,7 +379,7 @@
 				margin-top: 0
 		.circle_container
 			top: gem(380)
-			margin-left: gem(-340)
+			margin-left: gem(-345)
 	.inspire.second
 		height: gem(900)
 		.background__square
@@ -397,6 +400,8 @@
 			display: none
 		.section-bg img
 			margin-top: 0
+		img.soon-mobile-bg
+			display: block
 		&-right
 			margin-top: gem(120)
 	.footer
@@ -443,3 +448,25 @@
 			p.desc-2.gray
 				font-size: gem(10)
 				color: var(--color-white)
+	.popup
+		&-left
+			.popup-logo
+				margin-top: gem(37)
+		&-right
+			.form
+				width: 100%
+				padding: 0 gem(10)
+				h2
+					margin-top: gem(0)
+				form
+					button
+						margin-top: gem(42)
+						height: gem(54)
+			.success
+				margin-top: gem(22)
+
+@media only screen and (min-width : 1601px)
+	.popup-right 
+		.form, .success, .success-share
+			margin-top: gem(200)
+			margin-right: gem(200)

@@ -147,6 +147,8 @@ $(document).ready(function() {
     }
 
 
+
+
     //form 
     let position //позиция после регистрации
     let positionAfterSharing //позиция после шариинга
@@ -224,7 +226,7 @@ $(document).ready(function() {
          }
        }
        twttr.events.bind('tweet', function (ev) {
-           console.log(ev)
+           successShare(ev)
        });        
      });
 
