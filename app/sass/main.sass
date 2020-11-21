@@ -182,6 +182,12 @@ button[type='submit']
         align-items: center
         nav
             display: flex
+            transition: all 0.3s ease
+            &.hide
+                opacity: 0
+                pointer-events: none
+                transform: translateY(gem(-20))
+
             a
                 margin: 0 gem(16)
     &-right

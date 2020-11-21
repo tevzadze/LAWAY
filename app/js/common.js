@@ -45,6 +45,7 @@ $(document).ready(function() {
 
     window.addEventListener('scroll', function() {
         imagesGrow(groveImage);
+        navigationHide();
     });
 
 
@@ -265,7 +266,7 @@ $(document).ready(function() {
     }
 
 
-
+    //categories
     let categoryInput = document.querySelector('#catagory')
     let categoryDefaultS = document.querySelectorAll('.category-wrapper span')
     
@@ -274,5 +275,21 @@ $(document).ready(function() {
             categoryInput.value = categoryDefaultS[i].textContent
         })
     }
-
+    
+    //navigation hide
+    let headerNavHideClass = document.querySelector('.scroll-hidden')
+    console.log(headerNavHideClass)
+    function navigationHide() {
+        if ( headerNavHideClass != null) {
+            let headerNav = $('.scroll-hidden nav')
+            let offsetTop = headerNav.offset().top
+            // console.log(offsetTop)
+            if (offsetTop > 100) {
+                headerNav.addClass('hide')
+            } else {
+                headerNav.removeClass('hide')
+            }
+        }
+    }
+    
 });
